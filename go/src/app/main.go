@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/rayfiyo/simple-calculator/backend/cmd"
+	"go/src/cmd"
 )
 
 func main() {
