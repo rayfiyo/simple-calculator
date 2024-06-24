@@ -1,6 +1,5 @@
 const go = new Go();
 let wasmFunctions = {};
-
 let currentInput = "0";
 let previousInput = "";
 let currentOperation = null;
