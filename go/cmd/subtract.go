@@ -1,0 +1,11 @@
+package cmd
+
+import (
+	"syscall/js"
+)
+
+func Subtract(this js.Value, args []js.Value) interface{} {
+	a := args[0].Int()
+	b := args[1].Int()
+	return a - b
+}
