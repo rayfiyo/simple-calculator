@@ -1,6 +1,6 @@
 # simple-calculator
 
-- simple calculator
+- simple calculator by Wasm in the Go language
 
 # Function
 
