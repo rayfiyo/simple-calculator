@@ -1,36 +1,91 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
+
     <script src="wasm_exec.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
+
+    <title>Simple Calculator</title>
   </head>
+
   <body>
     <div class="calculator">
       <div class="display">
         <div class="previous-input" id="previousInput"></div>
-        <div class="current-input" id="currentInput">0</div>
+        <div class="current-input" id="currentInput">Simple Calculator</div>
       </div>
+
       <div class="buttons">
-        <button class="number" onclick="appendNumber(7)">7</button>
-        <button class="number" onclick="appendNumber(8)">8</button>
-        <button class="number" onclick="appendNumber(9)">9</button>
-        <button class="operation" onclick="setOperation('divide')">÷</button>
-        <button class="number" onclick="appendNumber(4)">4</button>
-        <button class="number" onclick="appendNumber(5)">5</button>
-        <button class="number" onclick="appendNumber(6)">6</button>
-        <button class="operation" onclick="setOperation('multiply')">×</button>
-        <button class="number" onclick="appendNumber(1)">1</button>
-        <button class="number" onclick="appendNumber(2)">2</button>
-        <button class="number" onclick="appendNumber(3)">3</button>
-        <button class="operation" onclick="setOperation('subtract')">-</button>
-        <button class="clear" onclick="clearCalculator()">C</button>
-        <button class="number" onclick="appendNumber(0)">0</button>
-        <button class="equals" onclick="calculate()">=</button>
-        <button class="operation" onclick="setOperation('add')">+</button>
+        <!-- １行目 -->
+        <button class="number" onclick="handleClick('appendNumber', '7')">
+          7
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '8')">
+          8
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '9')">
+          9
+        </button>
+        <button
+          class="operation"
+          onclick="handleClick('setOperation', 'divide')"
+        >
+          ÷
+        </button>
+        <!-- --- -->
+
+        <!-- ２行目 -->
+        <button class="number" onclick="handleClick('appendNumber', '4')">
+          4
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '5')">
+          5
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '6')">
+          6
+        </button>
+        <button
+          class="operation"
+          onclick="handleClick('setOperation', 'multiply')"
+        >
+          ×
+        </button>
+        <!-- --- -->
+
+        <!-- ３行目 -->
+        <button class="number" onclick="handleClick('appendNumber', '1')">
+          1
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '2')">
+          2
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '3')">
+          3
+        </button>
+        <button
+          class="operation"
+          onclick="handleClick('setOperation', 'subtract')"
+        >
+          -
+        </button>
+        <!-- --- -->
+
+        <!-- ４行目 -->
+        <button class="clear" onclick="handleClick('clearCalculator')">
+          C
+        </button>
+        <button class="number" onclick="handleClick('appendNumber', '0')">
+          0
+        </button>
+        <button class="equals" onclick="handleClick('calculate')">=</button>
+        <button class="operation" onclick="handleClick('setOperation', 'add')">
+          +
+        </button>
+        <!-- --- -->
       </div>
     </div>
   </body>
