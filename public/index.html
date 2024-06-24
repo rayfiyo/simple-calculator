@@ -15,8 +15,8 @@
   <body>
     <div class="calculator">
       <div class="display">
-        <div class="previous-input" id="previousInput"></div>
-        <div class="current-input" id="currentInput">Simple Calculator</div>
+        <div class="log" id="log"></div>
+        <div class="input" id="input">Simple Calculator</div>
       </div>
 
       <div class="buttons">
@@ -32,7 +32,7 @@
         </button>
         <button
           class="operation"
-          onclick="handleClick('setOperation', 'divide')"
+          onclick="handleClick('appendOperation', 'divide')"
         >
           ÷
         </button>
@@ -50,7 +50,7 @@
         </button>
         <button
           class="operation"
-          onclick="handleClick('setOperation', 'multiply')"
+          onclick="handleClick('appendOperation', 'multiply')"
         >
           ×
         </button>
@@ -68,7 +68,7 @@
         </button>
         <button
           class="operation"
-          onclick="handleClick('setOperation', 'subtract')"
+          onclick="handleClick('appendOperation', 'subtract')"
         >
           -
         </button>
@@ -82,7 +82,10 @@
           0
         </button>
         <button class="equals" onclick="handleClick('calculate')">=</button>
-        <button class="operation" onclick="handleClick('setOperation', 'add')">
+        <button
+          class="operation"
+          onclick="handleClick('appendOperation', 'add')"
+        >
           +
         </button>
         <!-- --- -->

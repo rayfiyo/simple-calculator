@@ -51,13 +51,13 @@ body {
 }
 
 /* 現在の入力値のスタイル */
-.current-input {
+.input {
     font-size: 32px;
     font-weight: bold;
 }
 
 /* 以前の入力値のスタイル */
-.previous-input {
+.log {
     font-size: 18px;
     color: #7f8c8d;
 }

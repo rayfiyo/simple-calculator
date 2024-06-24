@@ -9,8 +9,8 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
 
 // 入力された数値を表示
 function updateDisplay() {
-  document.getElementById("currentInput").textContent = getCurrentInput();
-  document.getElementById("previousInput").textContent = getPreviousInput();
+  document.getElementById("input").textContent = getInput();
+  document.getElementById("log").textContent = getLog();
 }
 
 // 数値ボタンが押された時の処理（ハンドラ）
@@ -24,9 +24,9 @@ function handleClick(funcName, arg) {
   updateDisplay();
 
   // 出力時のアニメーション
-  document.getElementById("currentInput").classList.add("animate");
+  document.getElementById("input").classList.add("animate");
   setTimeout(
-    () => document.getElementById("currentInput").classList.remove("animate"),
+    () => document.getElementById("input").classList.remove("animate"),
     500
   );
 }
