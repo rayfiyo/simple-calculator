@@ -1,6 +1,7 @@
 package calculator
 
 import (
+	"simple-calculator/go/cmd/error"
 	"simple-calculator/go/model"
 	"strconv"
 	"syscall/js"
@@ -11,8 +12,25 @@ func Calculate(this js.Value, args []js.Value) interface{} {
 		return nil
 	}
 
-	prev, _ := strconv.Atoi(model.Log.Number[:len(model.Log.Number)-2])
-	current, _ := strconv.Atoi(model.Input.Number)
+	prev, err := strconv.Atoi(model.Log.Number[:len(model.Log.Number)-2])
+	if err != nil {
+		error.Print(err)
+		return nil
+	}
+	if prev > 9999 {
+		error.Print("Large digits prev")
+		return nil
+	}
+
+	current, err := strconv.Atoi(model.Input.Number)
+	if err != nil {
+		error.Print(err)
+		return nil
+	}
+	if current > 9999 {
+		error.Print("Large digits current")
+		return nil
+	}
 
 	var result int
 	switch model.Input.Operation {
@@ -24,10 +42,7 @@ func Calculate(this js.Value, args []js.Value) interface{} {
 		result = prev * current
 	case "divide":
 		if current == 0 {
-			model.Input.Number = "Error"
-			model.Input.Operation = ""
-			model.Log.Number = ""
-			model.Log.Operation = ""
+			error.Print("Division by zero")
 			return nil
 		}
 		result = prev / current

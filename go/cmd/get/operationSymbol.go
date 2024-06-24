@@ -7,9 +7,9 @@ func OperationSymbol(operation string) string {
 	case "subtract":
 		return "-"
 	case "multiply":
-		return "×"
+		return "*"
 	case "divide":
-		return "÷"
+		return "/"
 	default:
 		return ""
 	}
