@@ -9,6 +9,6 @@
   - 整数
 - 二項演算
   - 足し算(add)
-  - 引き算(sub)
-  - 掛け算(mul)
-  - 割り算(div)
+  - 引き算(subtract)
+  - 掛け算(multiply)
+  - 割り算(divide)
