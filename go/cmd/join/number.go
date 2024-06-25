@@ -15,7 +15,7 @@ func Number(this js.Value, args []js.Value) interface{} {
 
 	switch model.Base.Display {
 	case "Simple Calculator":
-		model.Base.Display = ""
+		model.Base.Display = number
 	case "0":
 		model.Base.Display = number
 	default:
