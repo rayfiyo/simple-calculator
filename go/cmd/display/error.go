@@ -6,10 +6,9 @@ import (
 )
 
 func Error(err interface{}) interface{} {
-	model.Base.Number = "err:" + fmt.Sprint(err)
+	model.Base.Display = "err:" + fmt.Sprint(err)
 	model.Base.Operation = ""
-	model.Log.Number = ""
-	model.Log.Operation = ""
+	model.Log.Display = ""
 
 	return nil
 }

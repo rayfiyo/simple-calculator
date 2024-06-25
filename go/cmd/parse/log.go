@@ -7,7 +7,7 @@ import (
 )
 
 func Log() (int, error) {
-	num, err := strconv.Atoi(model.Log.Number[:len(model.Log.Number)-2])
+	num, err := strconv.Atoi(model.Log.Display[:len(model.Log.Display)-2])
 	if err != nil {
 		return num, err
 	}

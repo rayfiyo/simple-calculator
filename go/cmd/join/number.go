@@ -9,17 +9,17 @@ import (
 func Number(this js.Value, args []js.Value) interface{} {
 	number := args[0].String()
 
-	if strings.Contains(model.Base.Number, "err:") {
-		model.Base.Number = ""
+	if strings.Contains(model.Base.Display, "err:") {
+		model.Base.Display = ""
 	}
 
-	switch model.Base.Number {
+	switch model.Base.Display {
 	case "Simple Calculator":
-		model.Base.Number = ""
+		model.Base.Display = ""
 	case "0":
-		model.Base.Number = number
+		model.Base.Display = number
 	default:
-		model.Base.Number += number
+		model.Base.Display += number
 	}
 
 	return nil

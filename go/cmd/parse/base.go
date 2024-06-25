@@ -7,7 +7,7 @@ import (
 )
 
 func Base() (int, error) {
-	num, err := strconv.Atoi(model.Base.Number)
+	num, err := strconv.Atoi(model.Base.Display)
 	if err != nil {
 		return num, err
 	}

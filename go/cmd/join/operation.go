@@ -15,7 +15,8 @@ func Operation(this js.Value, args []js.Value) interface{} {
 	}
 
 	model.Base.Operation = operation
-	model.Log.Number = model.Base.Number + " " + get.OperationSymbol(operation)
-	model.Base.Number = "0"
+	model.Log.Display = model.Base.Display + " " + get.OperationSymbol(operation)
+	model.Base.Display = "0"
+
 	return nil
 }

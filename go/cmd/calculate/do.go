@@ -8,7 +8,7 @@ import (
 )
 
 func Do(this js.Value, args []js.Value) interface{} {
-	if model.Base.Operation == "" || model.Log.Number == "" {
+	if model.Base.Display == "" || model.Log.Display == "" {
 		return nil
 	}
 
@@ -22,20 +22,19 @@ func Do(this js.Value, args []js.Value) interface{} {
 		display.Error(err)
 	}
 
-	var result int
+	var result model.Result
 	switch model.Base.Operation {
 	case "add":
-		result = base + log
+		result.Value = log + base
 	case "subtract":
-		result = base - log
+		result.Value = log - base
 	case "multiply":
-		result = base * log
+		result.Value = log * base
 	case "divide":
 		if log == 0 {
 			display.Error("Division by zero")
-			return nil
 		}
-		result = base / log
+		result.Value = log / base
 	}
 
 	display.Result(result)

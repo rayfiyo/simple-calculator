@@ -6,5 +6,5 @@ import (
 )
 
 func Log(this js.Value, args []js.Value) interface{} {
-	return model.Log.Number
+	return model.Log.Display
 }

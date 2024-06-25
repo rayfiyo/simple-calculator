@@ -6,5 +6,5 @@ import (
 )
 
 func Base(this js.Value, args []js.Value) interface{} {
-	return model.Base.Number
+	return model.Base.Display
 }

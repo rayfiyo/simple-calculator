@@ -6,9 +6,9 @@ import (
 )
 
 func Clear(this js.Value, args []js.Value) interface{} {
-	model.Base.Number = "0"
+	model.Base.Display = "0"
 	model.Base.Operation = ""
-	model.Log.Number = ""
-	model.Log.Operation = ""
+	model.Log.Display = ""
+	
 	return nil
 }

@@ -1,11 +1,11 @@
 package model
 
 type base struct {
-	Number    string
+	Display   string
 	Operation string
 }
 
 var Base = &base{
-	Number:    "Simple Calculator",
+	Display:   "Simple Calculator",
 	Operation: "",
 }
