@@ -12,8 +12,8 @@ func Base() (int, error) {
 		return num, err
 	}
 
-	if num > 9999 {
-		return num, fmt.Errorf("large digits of base")
+	if num > 4294967296-1 {
+		return num, fmt.Errorf("too big (base)")
 	}
 
 	return num, nil

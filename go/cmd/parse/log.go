@@ -12,8 +12,8 @@ func Log() (int, error) {
 		return num, err
 	}
 
-	if num > 9999 {
-		return num, fmt.Errorf("large digits of log")
+	if num > 4294967296-1 {
+		return num, fmt.Errorf("too big (log)")
 	}
 
 	return num, nil
