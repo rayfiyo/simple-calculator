@@ -2,7 +2,7 @@ package model
 
 type Result struct {
 	Value    int
-	Base      int
 	Log       int
+	Base      int
 	Operation string
 }

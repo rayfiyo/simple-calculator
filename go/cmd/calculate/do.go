@@ -26,15 +26,27 @@ func Do(this js.Value, args []js.Value) interface{} {
 	switch model.Base.Operation {
 	case "add":
 		result.Value = log + base
+		result.Log = log
+		result.Base = base
+		result.Operation = "+"
 	case "subtract":
 		result.Value = log - base
+		result.Log = log
+		result.Base = base
+		result.Operation = "-"
 	case "multiply":
 		result.Value = log * base
+		result.Log = log
+		result.Base = base
+		result.Operation = "+"
 	case "divide":
 		if log == 0 {
 			display.Error("Division by zero")
 		}
 		result.Value = log / base
+		result.Log = log
+		result.Base = base
+		result.Operation = "/"
 	}
 
 	display.Result(result)
