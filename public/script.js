@@ -9,13 +9,13 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
 
 // 入力された数値を表示
 function updateDisplay() {
-  document.getElementById("input").textContent = getInput();
+  document.getElementById("base").textContent = getBase();
   document.getElementById("log").textContent = getLog();
 }
 
 // 数値ボタンが押された時の処理（ハンドラ）
 function handleClick(funcName, arg) {
-  // 演算結果の出力
+  // windowオブジェクトの関数を呼び出す
   if (arg !== undefined) {
     window[funcName](arg);
   } else {

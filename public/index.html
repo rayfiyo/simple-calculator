@@ -16,59 +16,59 @@
     <div class="calculator">
       <div class="display">
         <div class="log" id="log"></div>
-        <div class="input" id="input">Simple Calculator</div>
+        <div class="base" id="base">Simple Calculator</div>
       </div>
 
       <div class="buttons">
         <!-- １行目 -->
-        <button class="number" onclick="handleClick('appendNumber', '7')">
+        <button class="number" onclick="handleClick('joinNumber', '7')">
           7
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '8')">
+        <button class="number" onclick="handleClick('joinNumber', '8')">
           8
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '9')">
+        <button class="number" onclick="handleClick('joinNumber', '9')">
           9
         </button>
         <button
           class="operation"
-          onclick="handleClick('appendOperation', 'divide')"
+          onclick="handleClick('joinOperation', 'divide')"
         >
           /
         </button>
         <!-- --- -->
 
         <!-- ２行目 -->
-        <button class="number" onclick="handleClick('appendNumber', '4')">
+        <button class="number" onclick="handleClick('joinNumber', '4')">
           4
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '5')">
+        <button class="number" onclick="handleClick('joinNumber', '5')">
           5
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '6')">
+        <button class="number" onclick="handleClick('joinNumber', '6')">
           6
         </button>
         <button
           class="operation"
-          onclick="handleClick('appendOperation', 'multiply')"
+          onclick="handleClick('joinOperation', 'multiply')"
         >
           *
         </button>
         <!-- --- -->
 
         <!-- ３行目 -->
-        <button class="number" onclick="handleClick('appendNumber', '1')">
+        <button class="number" onclick="handleClick('joinNumber', '1')">
           1
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '2')">
+        <button class="number" onclick="handleClick('joinNumber', '2')">
           2
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '3')">
+        <button class="number" onclick="handleClick('joinNumber', '3')">
           3
         </button>
         <button
           class="operation"
-          onclick="handleClick('appendOperation', 'subtract')"
+          onclick="handleClick('joinOperation', 'subtract')"
         >
           -
         </button>
@@ -78,14 +78,11 @@
         <button class="clear" onclick="handleClick('clearCalculator')">
           C
         </button>
-        <button class="number" onclick="handleClick('appendNumber', '0')">
+        <button class="number" onclick="handleClick('joinNumber', '0')">
           0
         </button>
         <button class="equals" onclick="handleClick('calculate')">=</button>
-        <button
-          class="operation"
-          onclick="handleClick('appendOperation', 'add')"
-        >
+        <button class="operation" onclick="handleClick('joinOperation', 'add')">
           +
         </button>
         <!-- --- -->

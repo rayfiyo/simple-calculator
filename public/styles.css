@@ -51,7 +51,7 @@ body {
 }
 
 /* 現在の入力値のスタイル */
-.input {
+.base {
     font-size: 32px;
     font-weight: bold;
 }
