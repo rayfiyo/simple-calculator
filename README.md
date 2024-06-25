@@ -2,6 +2,12 @@
 
 - simple calculator by Wasm in the Go language
 
+# run on docker
+
+```
+docker build -t app . && docker run -it --rm --name app -p 8080:8080 app
+```
+
 # Function
 
 - 入力
