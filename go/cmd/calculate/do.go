@@ -40,7 +40,7 @@ func Do(this js.Value, args []js.Value) interface{} {
 		result.Value = log * base
 		result.Log = log
 		result.Base = base
-		result.Operation = "+"
+		result.Operation = "*"
 	case "divide":
 		if base == 0 {
 			display.Error("Division by zero")
