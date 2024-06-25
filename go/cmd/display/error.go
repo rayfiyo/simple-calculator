@@ -5,10 +5,8 @@ import (
 	"simple-calculator/go/model"
 )
 
-func Error(err interface{}) interface{} {
-	model.Base.Display = "err:" + fmt.Sprint(err)
+func Error(err interface{}) {
+	model.Base.Display = fmt.Sprint(err)
 	model.Base.Operation = ""
-	model.Log.Display = ""
-
-	return nil
+	model.Log.Display = "Error"
 }

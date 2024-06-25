@@ -5,10 +5,8 @@ import (
 	"strconv"
 )
 
-func Result(result model.Result) interface{} {
+func Result(result model.Result) {
 	model.Base.Display = strconv.Itoa(result.Value)
 	model.Base.Operation = ""
-	model.Log.Display = strconv.Itoa(result.Log) + result.Operation + strconv.Itoa(result.Base)
-
-	return nil
+	model.Log.Display = strconv.Itoa(result.Log) + " " + result.Operation + " " + strconv.Itoa(result.Base) + " ="
 }

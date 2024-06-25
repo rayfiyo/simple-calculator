@@ -15,11 +15,13 @@ func Do(this js.Value, args []js.Value) interface{} {
 	base, err := parse.Base()
 	if err != nil {
 		display.Error(err)
+		return nil
 	}
 
 	log, err := parse.Log()
 	if err != nil {
 		display.Error(err)
+		return nil
 	}
 
 	var result model.Result
@@ -40,8 +42,9 @@ func Do(this js.Value, args []js.Value) interface{} {
 		result.Base = base
 		result.Operation = "+"
 	case "divide":
-		if log == 0 {
+		if base == 0 {
 			display.Error("Division by zero")
+			return nil
 		}
 		result.Value = log / base
 		result.Log = log
