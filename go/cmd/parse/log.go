@@ -12,8 +12,11 @@ func Log() (int, error) {
 		return num, err
 	}
 
-	if num > 4294967296-1 {
-		return num, fmt.Errorf("too big (log)")
+	if num > +3037000499 {
+		return num, fmt.Errorf("positive overflow (log)")
+	}
+	if num < -3037000500 {
+		return num, fmt.Errorf("negative overflow (log)")
 	}
 
 	return num, nil
