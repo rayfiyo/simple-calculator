@@ -7,10 +7,15 @@ WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then(
   }
 );
 
-// 入力された数値を表示
+// 入力された数値を表示する関数
 function updateDisplay() {
   document.getElementById("base").textContent = getBase();
   document.getElementById("log").textContent = getLog();
+
+  // 出力時のアニメーション
+  const baseElement = document.getElementById("base");
+  baseElement.classList.add("animate");
+  setTimeout(() => baseElement.classList.remove("animate"), 500);
 }
 
 // 数値ボタンが押された時の処理（ハンドラ）
@@ -22,11 +27,4 @@ function handleClick(funcName, arg) {
     window[funcName]();
   }
   updateDisplay();
-
-  // 出力時のアニメーション
-  document.getElementById("input").classList.add("animate");
-  setTimeout(
-    () => document.getElementById("input").classList.remove("animate"),
-    500
-  );
 }
