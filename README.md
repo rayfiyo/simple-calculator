@@ -2,16 +2,24 @@
 
 - simple calculator by Wasm in the Go language
 
-# run on docker
+# try
+
+## on docker
 
 ```
 docker build -t app . && docker run -it --rm --name app -p 8080:8080 app
 ```
 
-# Function
+## on render (hosting service)
+
+- The server may be shut down after 2024/06/25
+
+https://simple-calculator-ygrt.onrender.com
+
+# function
 
 - 入力
-  - 最大４桁
+  - オーバーフローしない範囲（-3037000500 ~ +3037000499）
   - 整数
 - 二項演算
   - 足し算(add)
